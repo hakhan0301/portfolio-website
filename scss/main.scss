@@ -50,7 +50,7 @@ header {
 
 main {
 	padding: 4rem;
-	min-height: calc(100vh - 60px);
+	min-height: 100vh;
 
 	.icons {
 		margin-top: 1rem;
@@ -73,6 +73,24 @@ main {
 	}
 }
 
+#about {
+	.lg-heading {
+		font-size: 6rem;
+		padding-top: 0;
+	}
+
+	.sm-heading {
+		padding-bottom: 1vh;
+		background: rgba(lighten($color: $primary-color, $amount: 2), 1);
+	}
+
+	.bio {
+		.text-secondary {
+			background: rgba(lighten($color: $primary-color, $amount: 2), 1);
+		}
+	}
+}
+
 .about-info {
 	display: grid;
 	grid-gap: 30px;
@@ -84,13 +102,23 @@ main {
 	.bio-image {
 		grid-area: bioimage;
 		margin: auto;
-		border-radius: 50%;
+		border-radius: 15%;
 		border: $secondary-color 3px solid;
+		height: auto;
+		width: auto;
+		min-width: 300px;
+		min-height: 300px;
 	}
 
 	.bio {
 		grid-area: bio;
-		font-size: 1rem;
+		font-size: 1.5rem;
+		p {
+			text-align: left;
+			padding: 0 1vh 0 1vh;
+		}
+		padding-top: 3vh;
+		padding-bottom: 3vh;
 	}
 
 	.job-1 {
@@ -109,15 +137,17 @@ main {
 		background: lighten($primary-color, 5);
 		padding: 0.5rem;
 		border-top: $secondary-color 5px solid;
-	}
-}
+		border-bottom: $secondary-color 5px solid;
 
-#main-footer {
-	text-align: center;
-	padding: 1rem;
-	background: darken($primary-color, 10);
-	color: $text-color;
-	height: 60px;
+		h3 {
+			color: $secondary-color;
+		}
+
+		p {
+			padding: 0 1vh 0 1vh;
+			text-align: left;
+		}
+	}
 }
 
 @import 'mobile';

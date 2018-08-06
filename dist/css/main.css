@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: white;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #484848;
     list-style: none;
     transition: all 0.5s ease-out;
     transform: translate3d(0, -100%, 0); }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #555;
     transition: all 0.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
@@ -72,7 +72,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: white;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
@@ -94,8 +94,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #555;
+  color: white;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -112,7 +112,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.4); }
+      background: rgba(85, 85, 85, 0.4); }
 
 h1,
 h2,
@@ -128,7 +128,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(90, 90, 90, 0.5); }
 
 a {
   color: #fff;
@@ -144,7 +144,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: 100vh; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -157,6 +157,17 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
+#about .lg-heading {
+  font-size: 6rem;
+  padding-top: 0; }
+
+#about .sm-heading {
+  padding-bottom: 1vh;
+  background: #5a5a5a; }
+
+#about .bio .text-secondary {
+  background: #5a5a5a; }
+
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -165,11 +176,20 @@ main {
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
-    border: #fce86b 3px solid; }
+    border-radius: 15%;
+    border: #fce86b 3px solid;
+    height: auto;
+    width: auto;
+    min-width: 300px;
+    min-height: 300px; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1rem; }
+    font-size: 1.5rem;
+    padding-top: 3vh;
+    padding-bottom: 3vh; }
+    .about-info .bio p {
+      text-align: left;
+      padding: 0 1vh 0 1vh; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -177,16 +197,15 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #626262;
     padding: 0.5rem;
-    border-top: #fce86b 5px solid; }
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
-  height: 60px; }
+    border-top: #fce86b 5px solid;
+    border-bottom: #fce86b 5px solid; }
+    .about-info .job h3 {
+      color: #fce86b; }
+    .about-info .job p {
+      padding: 0 1vh 0 1vh;
+      text-align: left; }
 
 @media screen and (min-width: 1171px) {
   main {
