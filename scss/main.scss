@@ -7,7 +7,7 @@
 
 body {
 	@include background();
-	background: $primary-color;
+	background: linear-gradient($primary-color, darken($primary-color, 3));
 	color: $text-color;
 	height: 100%;
 	margin: 0;
@@ -57,6 +57,7 @@ main {
 
 		a {
 			padding: 0.4rem;
+			color: darken($primary-color, 20);
 
 			&:hover {
 				color: $secondary-color;
@@ -74,13 +75,16 @@ main {
 }
 
 #about {
+	padding: 0 30vh 2vh 30vh;
 	.lg-heading {
+		margin-top: 2vh;
 		font-size: 6rem;
-		padding-top: 0;
+		background: lighten($primary-color, 5);
 	}
 
 	.sm-heading {
 		padding-bottom: 1vh;
+		margin: 0 0 0 0;
 		background: rgba(lighten($color: $primary-color, $amount: 2), 1);
 	}
 
@@ -99,26 +103,29 @@ main {
 		'job1 job2 job3';
 	grid-template-columns: repeat(3, 1fr);
 
-	.bio-image {
-		grid-area: bioimage;
-		margin: auto;
-		border-radius: 15%;
-		border: $secondary-color 3px solid;
-		height: auto;
-		width: auto;
-		min-width: 300px;
-		min-height: 300px;
+	.bio-image-container {
+		padding-top: 3vh;
+		.bio-image {
+			grid-area: bioimage;
+			margin: auto;
+			border-radius: 15%;
+			border: $secondary-color 6px solid;
+			height: auto;
+			width: auto;
+			min-width: 43vh;
+			min-height: 43vh;
+		}
 	}
 
 	.bio {
+		background: lighten($primary-color, 5);
 		grid-area: bio;
 		font-size: 1.5rem;
 		p {
 			text-align: left;
 			padding: 0 1vh 0 1vh;
 		}
-		padding-top: 3vh;
-		padding-bottom: 3vh;
+		margin-top: 3vh;
 	}
 
 	.job-1 {
@@ -134,17 +141,19 @@ main {
 	}
 
 	.job {
+		font-size: 20px;
+		margin-top: 0;
 		background: lighten($primary-color, 5);
-		padding: 0.5rem;
-		border-top: $secondary-color 5px solid;
-		border-bottom: $secondary-color 5px solid;
+		// border-top: $secondary-color 5px solid;
+		// border-bottom: $secondary-color 5px solid;
 
 		h3 {
+			background: rgba(lighten($color: $primary-color, $amount: 2), 1);
 			color: $secondary-color;
 		}
 
 		p {
-			padding: 0 1vh 0 1vh;
+			margin: 0 1vh 1vh 1vh;
 			text-align: left;
 		}
 	}
